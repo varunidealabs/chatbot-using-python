@@ -8,10 +8,10 @@ from dotenv import load_dotenv
 load_dotenv()
 # Store API configuration in environment variables or constants
 
-API_KEY = os.getenv("AZURE_API_KEY")
-API_ENDPOINT = os.getenv("AZURE_API_ENDPOINT")
-API_VERSION = os.getenv("AZURE_API_VERSION")
-DEPLOYMENT_NAME = os.getenv("AZURE_DEPLOYMENT_NAME")
+API_KEY = st.secrets["general"]["AZURE_API_KEY"]
+API_ENDPOINT = st.secrets["general"]["AZURE_API_ENDPOINT"]
+API_VERSION = st.secrets["general"]["AZURE_API_VERSION"]
+DEPLOYMENT_NAME = st.secrets["general"]["AZURE_DEPLOYMENT_NAME"]
 
 # App title and configuration
 st.set_page_config(
